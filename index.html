@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tianle Chen — Multimodal AI Researcher</title>
+  <meta name="author" content="Tianle Chen">
+  <meta name="description" content="Tianle Chen is a Ph.D. student in Computer Science at Boston University studying multimodal large language models, vision-language reasoning, robustness, uncertainty, and interpretability.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tianle Chen — Multimodal AI Researcher">
+  <meta property="og:description" content="Ph.D. student at Boston University working on multimodal LLMs, vision-language reasoning, robustness, and trustworthy AI.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a class="nav__brand" href="#top" aria-label="Tianle Chen — home">
+        <span class="nav__mark" aria-hidden="true">
+          <span class="dot dot--v"></span><span class="dot dot--a"></span><span class="dot dot--l"></span>
+        </span>
+        <span class="nav__name">Tianle Chen</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#teaching">Teaching</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn--ghost btn--sm" href="https://cs-people.bu.edu/tianle/data/Tianle_CV.pdf" target="_blank" rel="noopener">CV</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <canvas class="hero__canvas" id="modalityCanvas" aria-hidden="true"></canvas>
+    <div class="hero__grain" aria-hidden="true"></div>
+
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="eyebrow">Ph.D. Student · Computer Science · Boston University</p>
+        <h1 class="hero__name">Tianle&nbsp;Chen</h1>
+        <p class="hero__lead">
+          I study how AI systems
+          <span class="hl hl--v">perceive</span>,
+          <span class="hl hl--a">reason</span>, and
+          <span class="hl hl--l">decide</span> — building models that are more
+          robust, reliable, and worthy of trust.
+        </p>
+
+        <p class="hero__meta">
+          Image &amp; Video Computing Group &nbsp;·&nbsp; Advised by
+          <a href="https://cs-people.bu.edu/dghadiya/" target="_blank" rel="noopener">Prof. Deepti Ghadiyaram</a>
+        </p>
+
+        <ul class="chips" aria-label="Research keywords">
+          <li>Multimodal LLMs</li>
+          <li>Vision-Language Reasoning</li>
+          <li>Robustness</li>
+          <li>Uncertainty</li>
+          <li>Interpretability</li>
+        </ul>
+
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="https://cs-people.bu.edu/tianle/data/Tianle_CV.pdf" target="_blank" rel="noopener">
+            Curriculum Vitae
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="https://scholar.google.com/citations?user=NJUjl7YAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn btn--ghost" href="https://github.com/cskyl" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn--ghost" href="mailto:tianle@bu.edu">Email</a>
+        </div>
+      </div>
+
+      <div class="hero__portrait">
+        <div class="portrait__frame">
+          <img src="Tianle_images/tianle.jpg" alt="Portrait of Tianle Chen" loading="eager">
+        </div>
+        <div class="portrait__legend" aria-hidden="true">
+          <span><i class="d d--v"></i>vision</span>
+          <span><i class="d d--a"></i>audio</span>
+          <span><i class="d d--l"></i>language</span>
+        </div>
+      </div>
+    </div>
+
+    <a class="hero__scroll" href="#about" aria-label="Scroll to about">
+      <span></span>
+    </a>
+  </section>
+
+  <main>
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container grid-2">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">01 — About</p>
+          <h2 class="section__title">A question of evidence</h2>
+        </div>
+        <div class="prose reveal">
+          <p>
+            I'm a Ph.D. student in Computer Science at Boston University, advised by
+            Prof. Deepti Ghadiyaram in the Image &amp; Video Computing Group. My research
+            focuses on <strong>multimodal large language models</strong>, vision-language
+            reasoning, robustness, uncertainty quantification, interpretability, and
+            generative AI.
+          </p>
+          <p>
+            My recent work studies how multimodal models integrate conflicting information
+            across different modalities — revealing modality biases and
+            vulnerabilities such as cross-modal attacks. More broadly, I want to
+            understand <em>when</em> models rely on the right evidence, how their attention and
+            uncertainty reflect reasoning, and how training and evaluation can make these
+            systems more faithful and reliable.
+          </p>
+          <p>
+            Previously I earned B.S. degrees in Mathematics and Computer Science from The Ohio
+            State University, where I worked on weakly supervised segmentation, long-tailed
+            recognition, LiDAR-based 3D detection, wildfire segmentation, and multimodal video
+            synthesis. My work has appeared at <strong>ECCV, ICLR, CVPR,</strong> and
+            <strong>NeurIPS</strong> venues. This summer I'll be a Research Intern at
+            <strong>Google Research</strong>.
+          </p>
+
+          <blockquote class="pull">
+            Building multimodal AI that knows what evidence to trust.
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH THEMES ============ -->
+    <section class="section section--alt" id="research">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">02 — Research</p>
+          <h2 class="section__title">What I work on</h2>
+          <p class="section__sub">
+            Diagnosing and improving how multimodal models allocate attention, estimate
+            uncertainty, and integrate evidence across modalities.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <span class="card__index">01</span>
+            <h3>Multimodal Reasoning &amp; Integration</h3>
+            <p>How do multimodal models decide which evidence to trust? I study whether MLLMs
+               truly integrate complementary modalities — or over-rely on the most dominant or
+               misleading signal.</p>
+            <ul class="card__tags">
+              <li>Multimodal QA</li><li>Modality bias</li><li>Evidence conflict</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__index">02</span>
+            <h3>Robustness &amp; Cross-Modal Attacks</h3>
+            <p>Seemingly natural cues — on-screen text, captions, or textual
+               prompts — can mislead multimodal models even when the correct evidence is
+               present. I study these attacks and their safety implications.</p>
+            <ul class="card__tags">
+              <li>Adversarial cues</li><li>Typographic attacks</li><li>Content moderation</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__index">03</span>
+            <h3>Interpretable Multimodal AI</h3>
+            <p>Using attention shifts, attribution, and log-probability diagnostics, I ask
+               whether a model's internal evidence allocation explains when it succeeds, fails,
+               or becomes overconfident.</p>
+            <ul class="card__tags">
+              <li>Attention analysis</li><li>Attribution</li><li>Effect size</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__index">04</span>
+            <h3>Uncertainty Quantification for VLMs</h3>
+            <p>Multimodal models should know not only <em>what</em> answer to give, but also
+               <em>when</em> the evidence is insufficient, conflicting, or unreliable.</p>
+            <ul class="card__tags">
+              <li>Calibration</li><li>Cross-modal uncertainty</li><li>Reliability</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__index">05</span>
+            <h3>Generative AI &amp; Object States</h3>
+            <p>I improve text-to-image models' ability to represent fine-grained physical
+               states — open, closed, full, broken, folded, or melted — via synthetic data and
+               targeted fine-tuning.</p>
+            <ul class="card__tags">
+              <li>Text-to-image</li><li>Synthetic data</li><li>Object states</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__index">06</span>
+            <h3>Computer Vision Foundations</h3>
+            <p>Earlier work building technical breadth: weakly supervised segmentation,
+               long-tailed recognition, LiDAR 3D detection, wildfire segmentation, and
+               topological losses.</p>
+            <ul class="card__tags">
+              <li>Segmentation</li><li>3D detection</li><li>Augmentation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PUBLICATIONS ============ -->
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">03 — Publications</p>
+          <h2 class="section__title">Selected papers</h2>
+          <p class="section__sub">
+            <span class="muted">* indicates equal contribution.</span>
+            Full list on <a href="https://scholar.google.com/citations?user=NJUjl7YAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
+          </p>
+        </div>
+
+        <div class="filters reveal" id="pubFilters" role="tablist" aria-label="Filter publications by topic">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="multimodal">Multimodal</button>
+          <button class="filter" data-filter="agents">Agents</button>
+          <button class="filter" data-filter="robustness">Robustness</button>
+          <button class="filter" data-filter="uncertainty">Uncertainty</button>
+          <button class="filter" data-filter="generative">Generative</button>
+          <button class="filter" data-filter="vision">Vision &amp; 3D</button>
+        </div>
+
+        <div class="pubs" id="pubList">
+
+          <!-- DeLoop -->
+          <article class="pub reveal" data-tags="agents">
+            <div class="pub__thumb pub__thumb--gen" style="--g1:#2563eb;--g2:#0d9488">
+              <span class="pub__glyph">↻</span>
+            </div>
+            <div class="pub__body">
+              <div class="pub__badges">
+                <span class="badge">Preprint</span>
+                <span class="badge badge--topic">Agents</span>
+              </div>
+              <h3 class="pub__title">DeLoop: Repeated Actions as Self-Supervision for Long-Horizon Agents</h3>
+              <p class="pub__authors"><strong>Tianle Chen</strong>, Pushkar Singh, Ketan Todi, Biswajit Paria, Qijia He, Wenqi Wang, Yuwen Tan, Jike Zhong, Sugato Basu, Deepti Ghadiyaram, Arjun Akula</p>
+              <p class="pub__note">Long-horizon agents sometimes repeat actions without making progress. DeLoop learns from those failures to reduce unproductive repetition.</p>
+              <div class="pub__links">
+                <a href="https://cskyl.github.io/deloop/" target="_blank" rel="noopener">Project Page</a>
+                <a href="https://arxiv.org/abs/2610.19376" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2026 -->
+          <article class="pub reveal" data-tags="multimodal robustness">
+            <div class="pub__thumb pub__thumb--gen" style="--g1:#3b82f6;--g2:#7c3aed">
+              <span class="pub__glyph">A·V·T</span>
+            </div>
+            <div class="pub__body">
+              <div class="pub__badges">
+                <span class="badge badge--star">CVPR 2026 Findings</span>
+                <span class="badge badge--topic">Multimodal</span>
+              </div>
+              <h3 class="pub__title">Some Modalities Are More Equal Than Others: Decoding and Architecting Multimodal Integration in MLLMs</h3>
+              <p class="pub__authors"><strong>Tianle Chen</strong>, Chaitanya Chakka, Arjun Reddy Akula, Xavier Thomas, Deepti Ghadiyaram</p>
+              <p class="pub__note">Controlled audio-video-text conflict benchmarks reveal that MLLMs exhibit strong modality biases rather than balanced multimodal reasoning.</p>
+              <div class="pub__links">
+                <a href="https://cskyl.github.io/MMA-Bench/" target="_blank" rel="noopener">Project Page</a>
+                <a href="https://arxiv.org/abs/2511.22826" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Under review: typographic attacks -->
+          <article class="pub reveal" data-tags="robustness multimodal">
+            <div class="pub__thumb pub__thumb--gen" style="--g1:#ef4444;--g2:#f59e0b">
+              <span class="pub__glyph">Aa</span>
+            </div>
+            <div class="pub__body">
+              <div class="pub__badges">
+                <span class="badge badge--review">Under Review</span>
+                <span class="badge badge--topic">Robustness</span>
+              </div>
+              <h3 class="pub__title">A Systematic Study of Cross-Modal Typographic Attacks on Audio-Visual Reasoning</h3>
+              <p class="pub__authors"><strong>Tianle Chen</strong>, Deepti Ghadiyaram</p>
+              <p class="pub__note">Semantic distractors injected through speech, on-screen text, and prompts can mislead audio-visual models even when correct evidence is present.</p>
+              <div class="pub__links">
+                <a href="https://cskyl.github.io/MLLM-Typography/" target="_blank" rel="noopener">Project Page</a>
+                <a href="https://arxiv.org/abs/2604.03995" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- VLM-UQBench -->
+          <article class="pub reveal" data-tags="uncertainty multimodal">
+            <div class="pub__thumb pub__thumb--gen" style="--g1:#14b8a6;--g2:#3b82f6">
+              <span class="pub__glyph">±</span>
+            </div>
+            <div class="pub__body">
+              <div class="pub__badges">
+                <span class="badge badge--review">In Submission</span>
+                <span class="badge badge--topic">Uncertainty</span>
+              </div>
+              <h3 class="pub__title">VLM-UQBench: A Benchmark for Modality-Specific and Cross-Modality Uncertainties in Vision-Language Models</h3>
+              <p class="pub__authors">Chenyu Wang, <strong>Tianle Chen</strong>, H. M. Sabbir Ahmad, Kayhan Batmanghelich, Wenchao Li</p>
+              <p class="pub__note">A benchmark of human-labeled samples and synthetic perturbations to evaluate modality-specific uncertainty, calibration, and reliability in VLMs.</p>
+              <div class="pub__links">
+                <a href="https://cskyl.github.io/vlm-uqbench/" target="_blank" rel="noopener">Project Page</a>
+                <a href="https://arxiv.org/abs/2602.09214" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2025 CVPR Workshop object states -->
+          <article class="pub reveal" data-tags="generative multimodal">
+            <div class="pub__thumb pub__thumb--gen" style="--g1:#8b5cf6;--g2:#ec4899">
+              <span class="pub__glyph">◐</span>
+            </div>
+            <div class="pub__body">
+              <div class="pub__badges">
+                <span class="badge">CVPR 2025 Workshop</span>
+                <span class="badge badge--topic">Generative</span>
+              </div>
+              <h3 class="pub__title">Improving Physical Object State Representation in Text-to-Image Generative Systems</h3>
+              <p class="pub__authors"><strong>Tianle Chen</strong>, Chaitanya Chakka, Deepti Ghadiyaram</p>
+              <p class="pub__note">An automatic synthetic-data pipeline and fine-tuning improve GenAI-Bench by 8.2% and two new object-state datasets by 17% / 24%.</p>
+            </div>
+          </article>
+
+          <!-- EEE-Bench CVPR 2025 -->
+          <article class="pub reveal" data-tags="multimodal">
+            <div class="pub__thumb pub__thumb--gen" style="--g1:#0ea5e9;--g2:#6366f1">
+              <span class="pub__glyph">⚡</span>
+            </div>
+            <div class="pub__body">
+              <div class="pub__badges">
+                <span class="badge">CVPR 2025</span>
+                <span class="badge badge--topic">Multimodal</span>
+              </div>
+              <h3 class="pub__title">EEE-Bench: A Comprehensive Multimodal Electrical and Electronics Engineering Benchmark</h3>
+              <p class="pub__authors">Ming Li, Jike Zhong, <strong>Tianle Chen</strong>, Konstantinos Psounis</p>
+              <p class="pub__note">A multimodal benchmark probing reasoning over electrical and electronics engineering problems.</p>
+            </div>
+          </article>
+
+          <!-- ICLR 2024 colorization -->
+          <article class="pub reveal" data-tags="vision">
+            <div class="pub__thumb">
+              <img src="images/Colorization.jpg" alt="LiDAR colorization pre-training" loading="lazy">
+            </div>
+            <div class="pub__body">
+              <div class="pub__badges">
+                <span class="badge">ICLR 2024</span>
+                <span class="badge badge--topic">3D Vision</span>
+              </div>
+              <h3 class="pub__title">Pre-training LiDAR-based 3D Object Detectors through Colorization</h3>
+              <p class="pub__authors">Tai-Yu Pan, Chenyang Ma, <strong>Tianle Chen*</strong>, Cheng Perng Phoo, Katie Z. Luo, Yurong You, Mark Campbell, Kilian Q. Weinberger, Bharath Hariharan, Wei-Lun Chao</p>
+              <p class="pub__note">Colorization as a pretext task for self-supervised pre-training of LiDAR 3D detectors in autonomous driving.</p>
+              <div class="pub__links">
+                <a href="https://arxiv.org/abs/2310.14592" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- NeurIPS 2023 Workshop SAM -->
+          <article class="pub reveal" data-tags="vision">
+            <div class="pub__thumb">
+              <img src="images/SAM-WSSS.jpg" alt="SAM-enhanced pseudo-labels" loading="lazy">
+            </div>
+            <div class="pub__body">
+              <div class="pub__badges">
+                <span class="badge">NeurIPS 2023 Workshop</span>
+                <span class="badge badge--topic">Segmentation</span>
+              </div>
+              <h3 class="pub__title">Segment Anything Model (SAM) Enhances Pseudo-Labels for Weakly Supervised Semantic Segmentation</h3>
+              <p class="pub__authors"><strong>Tianle Chen*</strong>, Zheda Mai*, Ruiwen Li, Wei-Lun Chao</p>
+              <p class="pub__note">SAM masks improve pseudo-label quality, narrowing the gap between image-level labels and dense masks.</p>
+              <div class="pub__links">
+                <a href="https://arxiv.org/abs/2305.05803" target="_blank" rel="noopener">arXiv</a>
+                <a href="https://github.com/cskyl/SAM_WSSS" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ECCV 2022 -->
+          <article class="pub reveal" data-tags="vision">
+            <div class="pub__thumb">
+              <img src="images/Copy-paste.jpg" alt="Free object segments for long-tailed instance segmentation" loading="lazy">
+            </div>
+            <div class="pub__body">
+              <div class="pub__badges">
+                <span class="badge">ECCV 2022</span>
+                <span class="badge badge--topic">Segmentation</span>
+              </div>
+              <h3 class="pub__title">Learning with Free Object Segments for Long-Tailed Instance Segmentation</h3>
+              <p class="pub__authors">Cheng Zhang, Tai-Yu Pan, <strong>Tianle Chen*</strong>, Jike Zhong, Wenjin Fu, Wei-Lun Chao</p>
+              <p class="pub__note">Mines free object segments from web images and ranks high-quality masks to improve long-tailed instance segmentation.</p>
+              <div class="pub__links">
+                <a href="https://par.nsf.gov/servlets/purl/10357396" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AIAA copy-paste -->
+          <article class="pub reveal" data-tags="vision">
+            <div class="pub__thumb pub__thumb--gen" style="--g1:#f97316;--g2:#dc2626">
+              <span class="pub__glyph">🔥</span>
+            </div>
+            <div class="pub__body">
+              <div class="pub__badges">
+                <span class="badge badge--review">AIAA SciTech 2026</span>
+                <span class="badge badge--topic">Segmentation</span>
+              </div>
+              <h3 class="pub__title">Centralized Copy-Paste: Enhanced Data Augmentation for Wildland Fire Semantic Segmentation</h3>
+              <p class="pub__authors">Joon Tai Kim, <strong>Tianle Chen</strong>, Ziyu Dong, Nishanth Kunchala, Alexander Guller, Daniel Ospina Acero, Roger Williams, Mrinal Kumar</p>
+              <p class="pub__note">Extracts, centralizes, and pastes refined fire clusters to combat label scarcity and class imbalance in drone-based fire segmentation.</p>
+            </div>
+          </article>
+
+        </div>
+        <p class="pubs__empty" id="pubEmpty" hidden>No publications in this category yet.</p>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">04 — Experience</p>
+          <h2 class="section__title">Where I've worked</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl reveal">
+            <div class="tl__time">May – Aug 2026</div>
+            <div class="tl__body">
+              <h3>Research Intern <span class="tl__org">· Google Research</span></h3>
+              <p class="tl__loc">San Francisco Bay Area, CA</p>
+              <p>Robust multimodal LLMs — multimodal reasoning, evidence allocation, counterfactual evidence construction, and model behavior under conflicting or misleading cues. Exploring attention-aware supervision and self-distillation for better multimodal grounding.</p>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <div class="tl__time">Sep 2024 – Present</div>
+            <div class="tl__body">
+              <h3>Research Assistant <span class="tl__org">· BU Image &amp; Video Computing</span></h3>
+              <p class="tl__loc">Boston, MA · Advisor: Dr. Deepti Ghadiyaram</p>
+              <p>Multimodal LLMs, vision-language reasoning, robustness, uncertainty, and generative AI: cross-modal conflict benchmarks, adversarial attacks, object-state generation, and modality-specific uncertainty.</p>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <div class="tl__time">Sep 2021 – May 2024</div>
+            <div class="tl__body">
+              <h3>Research Assistant <span class="tl__org">· OSU — ML as the Basis Lab</span></h3>
+              <p class="tl__loc">Columbus, OH · Advisor: Dr. Wei-Lun Chao</p>
+              <p>Weakly supervised segmentation with SAM, LiDAR-based 3D detection pre-training, long-tailed instance segmentation, and sensor-adaptation pipelines for 3D detection.</p>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <div class="tl__time">Aug 2023 – May 2024</div>
+            <div class="tl__body">
+              <h3>Research Assistant <span class="tl__org">· OSU Autonomy &amp; Complex Systems Lab</span></h3>
+              <p class="tl__loc">Columbus, OH · Advisor: Dr. Mrinal Kumar</p>
+              <p>Semantic segmentation and data augmentation for wildland fire imagery, improving drone-based fire-monitoring perception.</p>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <div class="tl__time">Aug 2023 – May 2024</div>
+            <div class="tl__body">
+              <h3>Researcher <span class="tl__org">· OSU CS — ReelMaker &amp; Talk-to-TikTok</span></h3>
+              <p class="tl__loc">Columbus, OH · Advisor: Dr. Arnab Nandi</p>
+              <p>Multimodal short-form video synthesis from papers and talks using PDF parsing, vision, speech-to-text, and LLMs. <em>Most Innovative Project</em>, HackOHI/O.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ TEACHING & SERVICE ============ -->
+    <section class="section" id="teaching">
+      <div class="container grid-2 grid-2--top">
+        <div class="reveal">
+          <p class="section__eyebrow">05 — Teaching</p>
+          <h2 class="section__title">Teaching &amp; mentoring</h2>
+          <div class="mini-list">
+            <div class="mini">
+              <h3>Teaching Fellow — CS 455: Computer Networks</h3>
+              <p class="mini__org">Boston University · Spring 2025</p>
+              <p>Delivered lectures, led labs, and mentored students on routing, transport protocols, latency, and congestion control.</p>
+            </div>
+            <div class="mini">
+              <h3>Teaching Assistant — CSE 1223 &amp; CSE 2321</h3>
+              <p class="mini__org">The Ohio State University · 2020–2024</p>
+              <p>Intro to Programming in Java; Foundations I: Discrete Structures.</p>
+            </div>
+          </div>
+          <blockquote class="pull pull--sm">
+            I enjoy connecting formal concepts with intuitive examples, visual explanations, and hands-on implementation.
+          </blockquote>
+        </div>
+
+        <div class="reveal">
+          <p class="section__eyebrow">06 — Service &amp; Honors</p>
+          <h2 class="section__title">Community</h2>
+          <div class="mini-list">
+            <div class="mini">
+              <h3>Reviewer</h3>
+              <p class="badges-inline">
+                <span class="badge badge--soft">CVPR</span><span class="badge badge--soft">ICCV</span>
+                <span class="badge badge--soft">ICLR</span><span class="badge badge--soft">AAAI</span>
+                <span class="badge badge--soft">WACV</span><span class="badge badge--soft">COLM</span>
+                <span class="badge badge--soft">TCSVT</span><span class="badge badge--soft">IJCV</span>
+              </p>
+            </div>
+            <div class="mini">
+              <h3>Student Academic Chair — BU AI Research Initiative</h3>
+              <p class="mini__org">Oct 2024 – Aug 2025</p>
+              <p>Organized AIR Seminar programming and academic events.</p>
+            </div>
+            <div class="mini">
+              <h3>Honors &amp; Awards</h3>
+              <p>Dean's List (all attended semesters) · HackOHI/O 11 Most Innovative Project Award.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">07 — Toolkit</p>
+          <h2 class="section__title">Skills</h2>
+        </div>
+        <div class="skills reveal">
+          <div class="skills__col">
+            <h3>Research Areas</h3>
+            <p>Multimodal LLMs · Vision-Language Reasoning · Robustness &amp; Safety · Uncertainty Quantification · Interpretability · Generative AI · Semantic Segmentation · 3D Detection</p>
+          </div>
+          <div class="skills__col">
+            <h3>Tools</h3>
+            <p>PyTorch · TensorFlow · Hugging Face Transformers · OpenCLIP/CLIP · Qwen-VL/Qwen-Omni · LLaVA-style models · Gemini APIs · WandB · Docker · Git · AWS S3</p>
+          </div>
+          <div class="skills__col">
+            <h3>Languages</h3>
+            <p>Python · MATLAB · Java · C · R · SQL · LaTeX</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container contact__inner reveal">
+        <p class="section__eyebrow">Get in touch</p>
+        <h2 class="contact__title">Let's talk about multimodal AI.</h2>
+        <p class="contact__sub">Open to research collaborations, reviewing, and conversations about trustworthy multimodal systems.</p>
+        <div class="hero__cta hero__cta--center">
+          <a class="btn btn--solid" href="mailto:tianle@bu.edu">tianle@bu.edu</a>
+          <a class="btn btn--ghost" href="https://scholar.google.com/citations?user=NJUjl7YAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+          <a class="btn btn--ghost" href="https://github.com/cskyl" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn--ghost" href="https://cs-people.bu.edu/tianle/data/Tianle_CV.pdf" target="_blank" rel="noopener">CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Tianle Chen</span>
+      <span class="footer__tag">Seeing, hearing, reading — reasoning faithfully.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
